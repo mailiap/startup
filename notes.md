@@ -1,5 +1,5 @@
 ## 9/14 GitHub
-I learned how to pull and push from GitHub and VSC
+* how to pull and push from GitHub and VSC
 
 ## 9/14 Amazon Web Services - EC2 
 * how to create an EC2 instance using the class AMI
