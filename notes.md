@@ -32,3 +32,6 @@
 ## CSS practice
 [codepen: css practice](https://codepen.io/mpohahau/pen/eYqNmBy)
 * how to know how to create CSS rules using selectors to apply declarations to my HTML elements
+
+## Startup HTML
+* put what learned here
