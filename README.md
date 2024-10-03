@@ -37,3 +37,14 @@ Here is a sequence diagram that shows the scenario of user authentication and me
 * **Database data** - render application data stored in the database, such as user details or high scores. This involves fetching data from the backend and displaying it in the application.
 
 * **WebSocket data** - to handle real-time data updates, such as live chat messages or updates on game scores.
+
+## HTML deliverable
+
+For this deliverable I built out the structure of my application using HTML.
+
+ HTML pages - Four HTML pages that represent the ability to login, see the different ways to connect with family, upcoming events, and an about page.
+ Links - The login page automatically goes to the connect page. The connect page has links for the other pages as well.
+ Text - The about page is represented by a textual description.
+ Images - I was able to create a logo which I have upload on every page. 
+ DB/Login - Input box and submit button for login. The events are pulled from the database.
+ WebSocket - The input of family events results are represented on the connect page in realtime.
