@@ -40,7 +40,7 @@ Here is a sequence diagram that shows the scenario of user authentication and me
 
 ## HTML deliverable
 
-For this deliverable I built out the structure of my application using HTML.
+➡️ For this deliverable I built out the structure of my application using HTML.
 
  - [x] **HTML pages** - Four HTML pages that represent the ability to login, see the different ways to connect with family, upcoming events, and an about page.
  - [x] **Links** - The login page automatically goes to the connect page. The connect page has links for the other pages as well.
