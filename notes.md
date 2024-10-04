@@ -1,3 +1,5 @@
+Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click/index.html)
+
 # 9/14 
 
 ## GitHub
@@ -34,4 +36,14 @@
 * how to know how to create CSS rules using selectors to apply declarations to my HTML elements
 
 ## Startup HTML
-* put what learned here
+* how to use the `Live Server VS Code extension` to see what my code looks like in the browser
+* how to create HTML files for each page on my web application
+* how to release my application to my production environment
+
+```sh
+./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
+```
+
+> Doing this will make this deliverable to my startup available from `https://startup.yourdomainname`.
+
+
