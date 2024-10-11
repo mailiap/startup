@@ -8,7 +8,7 @@ Link to my web application startup: [FamilyConnect](https://startup.mailiap260.c
 ## Amazon Web Services - EC2 
 * how to create an EC2 instance using the class AMI
 * how to assign an elastic IP address 
-> Note that your elastic IP address is allocated until your release it, not until you terminate your instance. So make sure you release it when you no longer need it. Otherwise you will get a nasty $3 bill every month.
+> Note that the elastic IP address is allocated until it's released, not until the instance is terminated. So make sure to release it when it's no longer need it. Otherwise it will get a nasty $3 bill every month.
 
 # 9/21
 
@@ -46,4 +46,12 @@ Link to my web application startup: [FamilyConnect](https://startup.mailiap260.c
 
 > Doing this will make this deliverable to my startup available from `https://startup.yourdomainname`.
 
+# 10/4
 
+## CSS flex
+[codepen: flex](https://codepen.io/mpohahau/pen/JjgKoLJ)
+* how to parition partition the application into areas that responsively move around as the window resizes or the orientation changes
+
+## CSS frameworks
+[codepen: frameworks](https://codepen.io/mpohahau/pen/XWvKJyp?editors=1100)
+* how to provide functions and components that commonly appear in web applications
