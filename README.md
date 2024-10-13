@@ -48,3 +48,14 @@ Here is a sequence diagram that shows the scenario of user authentication and me
  - [x] **Images** - I was able to create a logo which I have upload on every page. 
 - [x] **DB/Login**  - Input box and submit button for login. The events are pulled from the database.
  - [x] **WebSocket** - The input of family events results are represented on the connect page in realtime.
+
+## CSS deliverable
+
+➡️ For this deliverable I properly styled the application into its final appearance.
+
+- [x] **Header, footer, and main content body**
+- [x] **Navigation elements** - I darkened the elements on the navigation bar of which current page that the user is on.
+- [x] **Responsive to window resizing** - My app looks great on all window sizes and devices.
+- [x] **Application elements** - Used good contrast and the whitespace I'm still trying to fix.
+- [x] **Application text and color content** - Consistent fonts and color themes through each page. 
+- [x] **Application images** - My app logo is a photo that I uploaded on every page.
