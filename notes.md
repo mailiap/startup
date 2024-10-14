@@ -1,5 +1,7 @@
 Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click/index.html)
 
+> ./deployFiles.sh -k ~/keys/production.pem -h mailiap260.click -s startup
+
 ### 9/14 
 
 ## GitHub
