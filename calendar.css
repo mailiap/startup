@@ -5,3 +5,14 @@ td {
     text-overflow: ellipsis;
   }
   
+  .description {
+    flex: 1;
+    width: 100%;
+    padding-top: 7em;
+    padding-left: 1.5em;
+    color: black;
+  }
+
+  .header {
+    color: rebeccapurple;
+  }
