@@ -69,4 +69,9 @@ Link to my web application startup: [FamilyConnect](https://startup.mailiap260.c
 * how to represent the HTML elements that the browser uses to render the display
 
 # Startup CSS
-* how to 
+* how to
+
+### 10/21
+
+## Midterm Review
+[GitHub file](midterm_review.md)
