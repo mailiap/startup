@@ -71,7 +71,16 @@ Link to my web application startup: [FamilyConnect](https://startup.mailiap260.c
 # Startup CSS
 * how to
 
+### 10/18
+
+## Extra Credit
+[w3schools](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) exercises for javascript
+
+> It was a great review for basic coding. They might seem like easy exercises, but honestly of the basic things I forgot how to do and need a little reminder. I thinked the DOM section more because it gave me a better understanding of what to do because of the exercises. 
+
 ### 10/21
 
 ## Midterm Review
 [GitHub file](midterm_review.md)
+
+
