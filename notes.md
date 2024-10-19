@@ -51,32 +51,40 @@ Link to my web application startup: [FamilyConnect](https://startup.mailiap260.c
 ### 10/4
 
 ## CSS flex
-[codepen: flex](https://codepen.io/mpohahau/pen/JjgKoLJ)
+[codepen: css flex & media query layout](https://codepen.io/mpohahau/pen/JjgKoLJ)
 * how to parition partition the application into areas that responsively move around as the window resizes or the orientation changes
 
 ## CSS frameworks
-[codepen: frameworks](https://codepen.io/mpohahau/pen/XWvKJyp?editors=1100)
+[codepen: css bootstrap](https://codepen.io/mpohahau/pen/XWvKJyp?editors=1100)
 * how to provide functions and components that commonly appear in web applications
 
 ### 10/12
 
 ## JavaScript arrays
-[codepen: arrays](https://codepen.io/mpohahau/pen/oNKBYZw)
+[codepen: javascript arrays](https://codepen.io/mpohahau/pen/oNKBYZw)
 * how to represent a sequence of other objects and primitives
 
 ## JavaScript DOM (document object model)
-[codepen: DOM](https://codepen.io/mpohahau/pen/rNXjWwO)
+[codepen: javascript DOM](https://codepen.io/mpohahau/pen/rNXjWwO)
 * how to represent the HTML elements that the browser uses to render the display
 
 # Startup CSS
 * how to
 
-### 10/18
+### 10/19
 
 ## Extra Credit
 [w3schools](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) exercises for javascript
 
-> It was a great review for basic coding. They might seem like easy exercises, but honestly of the basic things I forgot how to do and need a little reminder. I thinked the DOM section more because it gave me a better understanding of what to do because of the exercises. 
+> It was a great review for basic coding. They might seem like easy exercises, but honestly of the basic things I forgot how to do and need a little reminder. I thinked the DOM section more because it gave me a better understanding of what to do because of the exercises.
+
+## JavaScript async/await
+[codepen: javascript pizza promise](https://codepen.io/mpohahau/pen/PoMKqoP)
+* how to develop a more concise representation
+
+> The `async` keyword wraps the execution of a promise and removed the need to chain functions.
+>
+> The `await` expression will block until the promise state moves to `fulfilled`, or throws an exception if the state moves to `rejected`
 
 ### 10/21
 
