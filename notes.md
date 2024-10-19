@@ -1,6 +1,8 @@
 Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click/index.html)
 
-> ./deployFiles.sh -k ~/keys/production.pem -h mailiap260.click -s startup
+```sh
+./deployFiles.sh -k ~/keys/production.pem -h mailiap260.click -s startup
+```
 
 # Development essentials
 
@@ -97,10 +99,8 @@ This is the pattern wanted to make a reflexive part of the development environme
 ### JavaScript async/await
 [codepen: javascript pizza async/await](https://codepen.io/mpohahau/pen/PoMKqoP)
 * how to develop a more concise representation
-
-> The `async` keyword wraps the execution of a promise and removed the need to chain functions.
->
-> The `await` expression will block until the promise state moves to `fulfilled`, or throws an exception if the state moves to `rejected`
+  * `async` keyword wraps the execution of a promise and removed the need to chain functions.
+  * `await` expression will block until the promise state moves to `fulfilled`, or throws an exception if the state moves to `rejected`
 
 ### Extra Credit
 [w3schools](https://www.w3schools.com/js/exercise_js.asp?filename=exercise_js_variables1) exercises for javascript
