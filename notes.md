@@ -1,7 +1,14 @@
 Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click/index.html)
 
+Deployment
+
 ```sh
 ./deployFiles.sh -k ~/keys/production.pem -h mailiap260.click -s startup
+```
+React Deployment
+
+```sh
+./deployReact.sh -k ~/keys/production.pem -h mailiap260.click -s startup
 ```
 
 # Development essentials
