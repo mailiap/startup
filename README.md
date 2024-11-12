@@ -59,3 +59,18 @@ Here is a sequence diagram that shows the scenario of user authentication and me
 - [x] **Application elements** - Used good contrast and the whitespace I'm still trying to fix.
 - [x] **Application text and color content** - Consistent fonts and color themes through each page. 
 - [x] **Application images** - My app logo is a photo that I uploaded on every page.
+
+## React deliverable
+
+➡️ The following is an example of the required information for the `Startup React` deliverable
+
+For this deliverable I used JavaScript and React so that the application completely works for a single user. I also added placeholders for future technology.
+
+- [x] **Bundled and transpiled** - Configured with Webpack and Babel for optimal build performance.
+- [x] **Components** - Key components include Login, FamilyFeed, and ShareMoment, with mocked functionality for login and WebSocket placeholders.
+- [x] **login** - Allows family members to enter credentials, taking them directly to the family feed.
+- [x] **database** - Currently uses local storage to save shared moments and updates, set to transition to a database in the future.
+- [x] **WebSocket** - setInterval is used to simulate live updates in the feed; WebSocket functionality will replace this in the final version.
+- [x] **application logic** - Family moments are highlighted, and new posts appear at the top of the feed for quick viewing.
+- [x] **Router** - Uses react-router-dom to manage routing between Login, Family Feed, and Share Moment components.
+- [x] **Hooks** - Uses useState to manage post and update states, and useEffect for real-time feed updates.
