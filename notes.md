@@ -1,4 +1,4 @@
-Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click/index.html)
+Link to my web application startup: [FamilyConnect](https://startup.mailiap260.click)
 
 Deployment
 
