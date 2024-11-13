@@ -1,0 +1,35 @@
+.players {
+  flex: 1;
+  width: 100%;
+  padding: 0.5em;
+  background-color: white;
+}
+
+.player-name {
+  color: rgb(171, 3, 39);
+  margin: 0 0.25em;
+  background-color: white;
+}
+
+#player-messages {
+  padding-top: 0.25em;
+  opacity: 0.7;
+  background-color: white;
+}
+
+.event {
+  color: rgb(69, 69, 69);
+  background-color: white;
+}
+
+.player-event {
+  color: rebeccapurple;
+  margin: 0 0.25em;
+  background-color: white;
+}
+
+.system-event {
+  color: rgb(221, 148, 40);
+  margin: 0 0.25em;
+  background-color: white;
+}

@@ -1,0 +1,15 @@
+.btn2 {
+    background-color: rgb(171, 3, 39);
+    color: white;
+    border-radius: 12px; 
+    padding: 10px 20px;  
+    border: none;        
+    cursor: pointer; 
+  }
+  
+  .btn-red {
+    background-color: red;
+    border-color: red;
+    color: white;
+  }
+  

@@ -1,0 +1,71 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    min-width: 375px;
+    background-color: white;
+}
+
+.btn2 {
+  background-color: rgb(171, 3, 39);
+  color: white;
+  border-radius: 12px; 
+  padding: 10px 20px;  
+  border: none;        
+  cursor: pointer; 
+}
+
+header {
+  flex: 0 80px;
+  background-color: white;
+}
+
+main {
+  flex: 1 calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: black;
+}
+
+footer {
+  float: right;
+  color: black;
+  background-color: gray;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  /*  overwrite Bootstrap so the menu does not wrap */
+  flex-direction: row !important;
+  list-style: none;
+  /* background-color: white; */
+}
+
+/* .navbar-brand {
+  padding-left: 0.3em;
+  border-bottom: solid rgb(182, 182, 182) thin;
+} */
+
+menu .nav-item {
+  padding: 0 0.3em;
+  color: white;
+  /* background-color: white; */
+}
+
+footer a {
+  float: right;
+}
+
+@media (max-height: 600px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+  main {
+    flex: 1 100vh;
+  }
+}
