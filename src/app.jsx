@@ -16,14 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className='body'>
-        <header className='container-fluid'>
+       <header className='container-fluid'>
         <nav class="navbar fixed-top navbar-light">
-
-          {/* <div id="picture" class="picture-box">
-            <a href="index.html">
-            <img src="FC Logo.png" alt="FC Logo" />
-          </a></div>  */}
-
+            <div className='navbar-brand'>
+              FamilyConnect<sup>&reg;</sup>
+            </div>
             <menu className='navbar-nav'>
               <li className='nav-item'>
                 <NavLink className='nav-link' to=''>
