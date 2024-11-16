@@ -11,6 +11,12 @@ React Deployment
 ./deployReact.sh -k ~/keys/production.pem -h mailiap260.click -s startup
 ```
 
+Service Deploment
+
+```sh
+./deployService.sh -k ~/keys/production.pem -h mailiap260.click -s startup
+```
+
 # Development essentials
 
 ### GitHub
