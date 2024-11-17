@@ -79,7 +79,7 @@ For this deliverable I used JavaScript and React so that the application complet
 
 ➡️ The following is an example of the required information for the `Startup Service` deliverable
 
-For this deliverable I added backend endpoints that receives votes and returns the voting totals.
+For this deliverable I added backend endpoints that receives calender from a shared family calender on Google.
 
 - [x] **Node.js/Express HTTP service** - Implemented a Node.js and Express backend with endpoints for user authentication and managing a family calendar.
 - [x] **Static middleware for frontend** - Configured Express to serve static files from the `public` directory, hosting the React frontend.
