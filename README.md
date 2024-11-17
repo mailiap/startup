@@ -84,7 +84,5 @@ For this deliverable I added backend endpoints that receives votes and returns t
 - [x] **Node.js/Express HTTP service** - Implemented a Node.js and Express backend with endpoints for user authentication and managing a family calendar.
 - [x] **Static middleware for frontend** - Configured Express to serve static files from the `public` directory, hosting the React frontend.
 - [x] **Calls to third party endpoints** - Integrated a Google Calendar iframe to display a dynamic family calendar. This serves as a basic third-party service integration.
-- [x] **Backend service endpoints** -
-* User authentication (`/auth/create`, `/auth/login`, `/auth/logout`)
-* Family calendar management (`/events` to get, post, edit, and delete events).
+- [x] **Backend service endpoints** - Developed endpoints for user authentication and family calendar management.
 - [x] **Frontend calls service endpoints** - Used the `fetch` function in React to interact with backend API endpoints for creating, retrieving, updating, and deleting calendar events.
