@@ -2,9 +2,9 @@ const express = require('express');
 const uuid = require('uuid');
 const app = express();
 
-// The scores and users are saved in memory and disappear whenever the service is restarted.
+// In-memory storage for users and events
 let users = {};
-let scores = [];
+let calendar = [];
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 4000;
@@ -54,17 +54,6 @@ apiRouter.delete('/auth/logout', (req, res) => {
   res.status(204).end();
 });
 
-// GetScores
-apiRouter.get('/scores', (_req, res) => {
-  res.send(scores);
-});
-
-// SubmitScore
-apiRouter.post('/score', (req, res) => {
-  scores = updateScores(req.body, scores);
-  res.send(scores);
-});
-
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });
@@ -74,24 +63,50 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-// updateScores considers a new score for inclusion in the high scores.
-function updateScores(newScore, scores) {
-  let found = false;
-  for (const [i, prevScore] of scores.entries()) {
-    if (newScore.score > prevScore.score) {
-      scores.splice(i, 0, newScore);
-      found = true;
-      break;
-    }
+// Get all calendar events
+apiRouter.get('/events', (_req, res) => {
+  res.send(calendar);
+});
+
+// Add a new calendar event
+apiRouter.post('/events', (req, res) => {
+  const { title, date, time, description, createdBy } = req.body;
+  if (!title || !date || !createdBy) {
+    res.status(400).send({ msg: 'Missing required fields: title, date, or createdBy.' });
+    return;
   }
 
-  if (!found) {
-    scores.push(newScore);
+  const newEvent = { id: uuid.v4(), title, date, time, description, createdBy };
+  calendar.push(newEvent);
+  res.send(newEvent);
+});
+
+// Delete a calendar event
+apiRouter.delete('/events/:id', (req, res) => {
+  const eventId = req.params.id;
+  const index = calendar.findIndex(event => event.id === eventId);
+  if (index !== -1) {
+    calendar.splice(index, 1);
+    res.status(204).end();
+  } else {
+    res.status(404).send({ msg: 'Event not found' });
+  }
+});
+
+// Edit a calendar event
+apiRouter.put('/events/:id', (req, res) => {
+  const eventId = req.params.id;
+  const event = calendar.find(event => event.id === eventId);
+  if (!event) {
+    res.status(404).send({ msg: 'Event not found' });
+    return;
   }
 
-  if (scores.length > 10) {
-    scores.length = 10;
-  }
+  const { title, date, time, description } = req.body;
+  if (title) event.title = title;
+  if (date) event.date = date;
+  if (time) event.time = time;
+  if (description) event.description = description;
 
-  return scores;
-}
+  res.send(event);
+});
