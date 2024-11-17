@@ -74,3 +74,17 @@ For this deliverable I used JavaScript and React so that the application complet
 - [x] **application logic** - Family moments are highlighted, and new posts appear at the top of the feed for quick viewing.
 - [x] **Router** - Uses react-router-dom to manage routing between Login, Family Feed, and Share Moment components.
 - [x] **Hooks** - Uses useState to manage post and update states, and useEffect for real-time feed updates.
+
+## React deliverable
+
+➡️ The following is an example of the required information for the `Startup Service` deliverable
+
+For this deliverable I added backend endpoints that receives votes and returns the voting totals.
+
+- [x] **Node.js/Express HTTP service** - Implemented a Node.js and Express backend with endpoints for user authentication and managing a family calendar.
+- [x] **Static middleware for frontend** - Configured Express to serve static files from the `public` directory, hosting the React frontend.
+- [x] **Calls to third party endpoints** - Integrated a Google Calendar iframe to display a dynamic family calendar. This serves as a basic third-party service integration.
+- [x] **Backend service endpoints** -
+* User authentication (`/auth/create`, `/auth/login`, `/auth/logout`)
+* Family calendar management (`/events` to get, post, edit, and delete events).
+- [x] **Frontend calls service endpoints** - Used the `fetch` function in React to interact with backend API endpoints for creating, retrieving, updating, and deleting calendar events.
