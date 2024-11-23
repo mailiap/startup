@@ -6,7 +6,7 @@ import { AuthState } from './authState';
 
 export function Login({ userName, authState, onAuthChange }) {
   return (
-    <main className='container-fluid bg-light text-center'>
+    <main>
       <div>
         {authState !== AuthState.Unknown && <h1>Welcome to FamilyConnect</h1>}
         {authState === AuthState.Authenticated && (

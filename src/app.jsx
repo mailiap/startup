@@ -18,8 +18,9 @@ function App() {
       <div className='body'>
        <header className='container-fluid'>
         <nav class="navbar fixed-top navbar-light">
-            <div className='navbar-brand'>
-              FamilyConnect<sup>&reg;</sup>
+          <div className='media'>
+            <div id='picture2'>
+            <img src='FC Logo.png' alt='FamilyConnect Logo'/>
             </div>
             <menu className='navbar-nav'>
               <li className='nav-item'>
@@ -47,6 +48,7 @@ function App() {
                 </NavLink>
               </li>
             </menu>
+            </div>
           </nav>
         </header>
 
