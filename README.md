@@ -75,7 +75,7 @@ For this deliverable I used JavaScript and React so that the application complet
 - [x] **Router** - Uses react-router-dom to manage routing between Login, Family Feed, and Share Moment components.
 - [x] **Hooks** - Uses useState to manage post and update states, and useEffect for real-time feed updates.
 
-## React deliverable
+## Service deliverable
 
 ➡️ The following is an example of the required information for the `Startup Service` deliverable
 
@@ -86,3 +86,16 @@ For this deliverable I added backend endpoints that receives calender from a sha
 - [x] **Calls to third party endpoints** - Integrated a Google Calendar iframe to display a dynamic family calendar. This serves as a basic third-party service integration.
 - [x] **Backend service endpoints** - Developed endpoints for user authentication and family calendar management.
 - [x] **Frontend calls service endpoints** - Used the `fetch` function in React to interact with backend API endpoints for creating, retrieving, updating, and deleting calendar events.
+
+## DB/Login deliverable
+
+➡️ The following is an example of the required information for the `Startup DB/ Login` deliverable
+
+For this deliverable I associate the events with the logged in user. I stored the users in the database.
+
+- [x] **MongoDB Atlas database created** - done!
+- [x] **Stores data in MongoDB** - done!
+- [x] **User registration** - Creates a new account in the database.
+- [x] **existing user** - Stores the family connects information if the user already exists.
+- [x] **Use MongoDB to store credentials** - Stores both user and their family circle.
+- [x] **Restricts functionality** - You cannot join a family cirlce until you have logged in. This is restricted on the frontend only.
