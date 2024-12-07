@@ -48,9 +48,9 @@ export function FamilyActions(props) {
         <div className='family-name'>
           Family Actions
         </div>
-        <div className='action-status'>
+        {/* <div className='action-status'>
           {actionType && `${actionType}: ${JSON.stringify(actionData)}`}
-        </div>
+        </div> */}
         <div className='button-container'>
           <Button variant='primary' onClick={() => onPressed('share-recipe')}>Share Recipe</Button>
           <Button variant='primary' onClick={() => onPressed('add-event')}>Add Event</Button>

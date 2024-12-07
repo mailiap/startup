@@ -30,6 +30,8 @@ export function Family(props) {
         message = `added an event: "${event.value.eventName}" to the family calendar`;
       } else if (event.type === FamilyEvent.Message) {
         message = `sent a message: "${event.value.msg}"`;
+      } else if (event.type === FamilyEvent.System) {
+        message = event.value.msg;
       }
 
       messageArray.push(
