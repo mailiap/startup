@@ -12,9 +12,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.3",
+    "express": "^4.21.2",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3"
-  }
+  },
+  "description": "### Elevator Pitch The app that brings your family closer together, no matter where they are in the world. With FamilyConnect, you can easily share photos, updates, recipes, and special moments in your family group chat, and instantly invite loved ones from around the globe to join in.",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

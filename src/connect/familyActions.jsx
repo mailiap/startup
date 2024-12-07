@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';  // Use useNavigate for routing in React Router v6
-import { FamilyNotifier } from './familyNotifier';  // Custom notifier for family-related actions
+import { delay } from './delay';
+import { FamilyEvent, FamilyNotifier } from './familyNotifier';  // Custom notifier for family-related actions
 import './familyActions.css';
 
 export function FamilyActions(props) {
@@ -19,7 +21,7 @@ export function FamilyActions(props) {
       if (recipe) {
         setActionType('Recipe Shared');
         setActionData({ recipe });
-        FamilyNotifier.broadcastEvent(userName, 'Recipe', { recipe });
+        FamilyNotifier.broadcastEvent(userName, FamilyEvent.Recipe);
       }
     } else if (action === 'add-event') {
       // Navigate to the calendar page
@@ -28,14 +30,14 @@ export function FamilyActions(props) {
       // Optionally, you can set the action type and data for display
       setActionType('Event Added');
       setActionData({});
-      FamilyNotifier.broadcastEvent(userName, 'Event', {});
+      FamilyNotifier.broadcastEvent(userName, FamilyEvent.Event);
     } else if (action === 'send-message') {
       // Example of sending a message
       const message = prompt('Enter your message:');
       if (message) {
         setActionType('Message Sent');
         setActionData({ message });
-        FamilyNotifier.broadcastEvent(userName, 'Message', { message });
+        FamilyNotifier.broadcastEvent(userName, FamilyEvent.Message);
       }
     }
   }
