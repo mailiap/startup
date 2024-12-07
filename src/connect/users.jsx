@@ -1,54 +1,41 @@
 import React from 'react';
 
-import { GameNotifier } from './gameNotifier';
+import { FamilyEvent, FamilyNotifier } from './familyNotifier';  // Updated import
 import './users.css';
 
-export function Users(props) {
+export function Family(props) {
   const userName = props.userName;
 
   const [events, setEvent] = React.useState([]);
 
   React.useEffect(() => {
-    GameNotifier.addHandler(handleGameEvent);
+    FamilyNotifier.addHandler(handleFamilyEvent);  // Listening for family events
 
     return () => {
-      GameNotifier.removeHandler(handleGameEvent);
+      FamilyNotifier.removeHandler(handleFamilyEvent);
     };
-  }, [events]); // Ensure the effect re-runs if `events` changes
+  }, []);  // Added dependency array to ensure proper effect cleanup
 
-  function handleGameEvent(event) {
-    let newEvents = [event, ...events];
-    if (newEvents.length > 10) {
-      newEvents = newEvents.slice(0, 10);
-    }
-    setEvent(newEvents);
+  function handleFamilyEvent(event) {
+    setEvent([...events, event]);  // Adding new family event to state
   }
 
   function createMessageArray() {
     const messageArray = [];
-    
-    // Random messages to choose from
-    const randomMessages = [
-      "made a new post",
-      "created a new event",
-      "shared a new photo",
-      "shared a new recipe",
-      "made a new request",
-      "sent you a message"
-    ];
-
-    // Random users to choose from
-    const randomUsers = ["Alice", "Bob", "Charlie", "Dana", "Eli", "Fiona", "George", "Hannah", "Ivan"];
-
-    // Generate a random message for each event
     for (const [i, event] of events.entries()) {
-      // Randomly select a message and user
-      const message = randomMessages[Math.floor(Math.random() * randomMessages.length)];
-      const user = randomUsers[Math.floor(Math.random() * randomUsers.length)];
+      let message = 'unknown action';
+      if (event.type === FamilyEvent.Recipe) {
+        message = `shared a recipe: "${event.value.recipeName}"`;
+      } else if (event.type === FamilyEvent.Event) {
+        message = `added an event: "${event.value.eventName}" to the family calendar`;
+      } else if (event.type === FamilyEvent.Message) {
+        message = `sent a message: "${event.value.msg}"`;
+      }
 
       messageArray.push(
         <div key={i} className='event'>
-          <span className={'player-event'}>{user}</span> {message}
+          <span className={'player-event'}>{event.from.split('@')[0]}</span>
+          {message}
         </div>
       );
     }
@@ -56,10 +43,10 @@ export function Users(props) {
   }
 
   return (
-    <div className='players bg-white'>
-      Welcome
+    <div className='family'>
+      Family Member
       <span className='player-name'>{userName}</span>
-      <div id='player-messages'>{createMessageArray()}</div>
+      <div id='family-messages'>{createMessageArray()}</div>
     </div>
   );
 }
