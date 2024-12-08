@@ -99,3 +99,14 @@ For this deliverable I associate the events with the logged in user. I stored th
 - [x] **existing user** - Stores the family connects information if the user already exists.
 - [x] **Use MongoDB to store credentials** - Stores both user and their family circle.
 - [x] **Restricts functionality** - You cannot join a family cirlce until you have logged in. This is restricted on the frontend only.
+
+## Websocket deliverable
+
+➡️ The following is an example of the required information for the `Startup Websocket` deliverable
+
+For this deliverable I used webSocket to update the when a member shares somethign on the frontend in realtime.
+
+- [x] **Backend listens for WebSocket connection** - done!
+- [x] **Frontend makes WebSocket connection** - done!
+- [x] **Data sent over WebSocket connection** - done!
+- [x] **WebSocket data displayed** - All updates display in realtime.
