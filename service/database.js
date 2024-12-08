@@ -7,7 +7,6 @@ const url = `mongodb+srv://${config.userName}:${config.password}@${config.hostna
 const client = new MongoClient(url);
 const db = client.db('startup');
 const userCollection = db.collection('user');
-// const scoreCollection = db.collection('recipes');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {
@@ -40,24 +39,8 @@ async function createUser(email, password) {
   return user;
 }
 
-// async function addEvent(event) {
-//   return eventCollection.insertOne(event);
-// }
-
-// function getEvent() {
-//   const query = { score: { $gt: 0, $lt: 900 } };
-//   const options = {
-//     sort: { score: -1 },
-//     limit: 10,
-//   };
-//   const cursor = scoreCollection.find(query, options);
-//   return cursor.toArray();
-// }
-
 module.exports = {
   getUser,
   getUserByToken,
-  createUser,
-  // addEvent,
-  // getEvent,
-};
+  createUser
+  };

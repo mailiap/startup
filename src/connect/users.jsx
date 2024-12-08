@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FamilyEvent, FamilyNotifier } from './familyNotifier';  // Updated import
+import { FamilyEvent, FamilyNotifier } from './familyNotifier';
 import './users.css';
 
 export function Family(props) {
@@ -9,27 +9,27 @@ export function Family(props) {
   const [events, setEvent] = React.useState([]);
 
   React.useEffect(() => {
-    FamilyNotifier.addHandler(handleFamilyEvent);  // Listening for family events
+    FamilyNotifier.addHandler(handleFamilyEvent);
 
     return () => {
       FamilyNotifier.removeHandler(handleFamilyEvent);
     };
-  }, []);  // Added dependency array to ensure proper effect cleanup
+  });
 
   function handleFamilyEvent(event) {
-    setEvent([...events, event]);  // Adding new family event to state
+    setEvent([...events, event]);
   }
 
   function createMessageArray() {
     const messageArray = [];
     for (const [i, event] of events.entries()) {
-      let message = 'unknown action';
+      let message = 'unknown';
       if (event.type === FamilyEvent.Recipe) {
-        message = `shared a recipe: "${event.value.recipeName}"`;
+        message = `shared the recipe: "${event.value.Recipe}"`;
       } else if (event.type === FamilyEvent.Event) {
-        message = `added an event: "${event.value.eventName}" to the family calendar`;
-      } else if (event.type === FamilyEvent.Message) {
-        message = `sent a message: "${event.value.msg}"`;
+        message = `added an event to the family calendar`;
+      } else if (event.type === FamilyEvent.Msg) {
+        message = `sent the message: "${event.value.Msg}" to the whole family`;
       } else if (event.type === FamilyEvent.System) {
         message = event.value.msg;
       }

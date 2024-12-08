@@ -22,10 +22,10 @@ class FamilyEventNotifier {
     const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
     this.socket = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
     this.socket.onopen = (event) => {
-      this.receiveEvent(new EventMessage('Family', FamilyEvent.System, { msg: 'connected' }));
+      this.receiveEvent(new EventMessage('FamilyConnect', FamilyEvent.System, { msg: 'connected' }));
     };
     this.socket.onclose = (event) => {
-      this.receiveEvent(new EventMessage('Family', FamilyEvent.System, { msg: 'disconnected' }));
+      this.receiveEvent(new EventMessage('FamilyConnect', FamilyEvent.System, { msg: 'disconnected' }));
     };
     this.socket.onmessage = async (msg) => {
       try {
