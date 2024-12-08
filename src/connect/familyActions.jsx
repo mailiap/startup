@@ -25,24 +25,28 @@ export function FamilyActions(props) {
       if (action === 'share-recipe') {
         const recipeName = prompt('Enter recipe name:');
         if (recipeName) {
-          const recipeDetails = prompt('Enter the recipe details:');
-          if (recipeDetails) {
+          const ingredients = prompt('Enter the recipe ingredient and instructions:');
+          if (ingredients) {
             setActionType('Recipe Shared');
-            setActionData({ recipe });
-            FamilyNotifier.broadcastEvent(userName, FamilyEvent.Recipe);
+            setActionData({ recipeName, ingredients });
+            FamilyNotifier.broadcastEvent(userName, FamilyEvent.Recipe, { Recipe: recipeName });
           }
         }
+
       } else if (action === 'add-event') {
-        navigate('/calendar');
-        setActionType('Event Added');
-        setActionData({});
-        FamilyNotifier.broadcastEvent(userName, FamilyEvent.Event);
+        const familyEvent = prompt('Enter name of the family event you want to add:');
+        if (familyEvent) {
+          navigate('/calendar');
+          setActionType('Event Added');
+          setActionData({ familyEvent });
+          FamilyNotifier.broadcastEvent(userName, FamilyEvent.Event, { Event: familyEvent });
+        }
       } else if (action === 'send-message') {
-        const message = prompt('Enter your message:');
-        if (message) {
+        const messageInput = prompt('Enter your message:');
+        if (messageInput) {
           setActionType('Message Sent');
-          setActionData({ msg });
-          FamilyNotifier.broadcastEvent(userName, FamilyEvent.Message);
+          setActionData({ messageInput });
+          FamilyNotifier.broadcastEvent(userName, FamilyEvent.Message, { Message: messageInput });
         }
       }
 
@@ -57,9 +61,9 @@ export function FamilyActions(props) {
           Family Actions
         </div>
         <div className='button-container'>
-          <Button variant='primary' onClick={() => onPressed('share-recipe')}>Share Recipe</Button>
-          <Button variant='primary' onClick={() => onPressed('add-event')}>Add Event</Button>
-          <Button variant='primary' onClick={() => onPressed('send-message')}>Send Message</Button>
+          <Button className='btn2' onClick={() => onPressed('share-recipe')}>Share Recipe</Button>
+          <Button className='btn2' onClick={() => onPressed('add-event')}>Add Event</Button>
+          <Button className='btn2' onClick={() => onPressed('send-message')}>Send Message</Button>
         </div>
       </div>
     </div>

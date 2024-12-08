@@ -25,11 +25,23 @@ export function Family(props) {
     for (const [i, event] of events.entries()) {
       let message = 'unknown';
       if (event.type === FamilyEvent.Recipe) {
-        message = `shared the recipe: "${event.value.Recipe}"`;
+        message = (
+          <>
+            shared a <span className="action-text">RECIPE</span>: {event.value.Recipe}
+          </>
+        );
       } else if (event.type === FamilyEvent.Event) {
-        message = `added an event to the family calendar`;
-      } else if (event.type === FamilyEvent.Msg) {
-        message = `sent the message: "${event.value.Msg}" to the whole family`;
+        message = (
+          <>
+            added an <span className="action-text">EVENT</span>: {event.value.Event}
+          </>
+        );
+      } else if (event.type === FamilyEvent.Message) {
+        message = (
+          <>
+            sent a family <span className="action-text">MESSAGE</span>: {event.value.Message}
+          </>
+        );
       } else if (event.type === FamilyEvent.System) {
         message = event.value.msg;
       }

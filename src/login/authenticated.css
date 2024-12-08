@@ -4,11 +4,25 @@
   padding: 0.5em;
 }
 
-.btn2 {
+.btn2.btn.btn-primary, .btn2.btn.btn-primary.disabled {
   background-color: rgb(171, 3, 39);
   color: white;
   border-radius: 12px; 
   padding: 10px 20px;  
-  border: none;        
+  margin: 5px;  
   cursor: pointer; 
+}
+
+.btn3.btn.btn-primary, .btn3.btn.btn-primary.disabled {
+  background-color: #6c757d;
+  color: white;
+  border-radius: 12px; 
+  padding: 10px 20px;  
+  margin: 5px;        
+  cursor: pointer; 
+}
+
+.buttons {
+  margin-left: 150px;
+  flex: auto;
 }
