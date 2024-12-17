@@ -123,6 +123,6 @@ This is the pattern wanted to make a reflexive part of the development environme
 # Midterm
 
 ### Midterm study guide
-[GitHub file](midterm_review.md)
+[Midterm Questions](midterm_review.md)
 
 
